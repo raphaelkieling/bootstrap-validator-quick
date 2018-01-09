@@ -1,0 +1,5 @@
+<div class="form-group">
+  <label *ngIf="label" [for]="id">{{label}}</label>
+  <input [type]="type" [disabled]="disabled" [class]="class" [id]="id" [placeholder]="placeholder" [value]="value" (keyup)="handleChange($event.target.value)">
+  <small *ngIf="help" [class]="'form-text text-muted'">{{help}}</small>
+</div>
