@@ -16,7 +16,6 @@ export class BsValidatorDirective implements AfterViewChecked {
   @Input() config: ConfigValidator = new ConfigValidator();
 
   private label: HTMLElement;
-  private elementError;
 
   constructor(
     public el: ElementRef,

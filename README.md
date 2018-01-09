@@ -19,9 +19,55 @@ npm install bootstrap-validator-quick --save
 
 ## Example Use
 
-Alguns exemplos interessantes e úteis sobre como seu projeto pode ser utilizado. Adicione blocos de códigos e, se necessário, screenshots.
+Now existing two directives
 
-_Para mais exemplos, consulte a [Wiki][wiki]._ 
+### bs-validator
+<br>
+<b>Errors</b>
+<br>
+```
+  error = {
+    name: {
+      maxlength: 'Max length is 10',
+      required: 'Message to show in the element error'
+    }
+  }
+```
+<br>
+<b>Config</b>
+```
+export class ConfigValidator {
+  error = new ErrorConfig();
+  validation = new Validation();
+
+}
+
+export class Validation {
+  showValidationAfterTouched?= true;
+  showValid?= false;
+}
+
+export class ErrorConfig {
+  showAsterisk?= true;
+}
+	
+```
+### bs-input
+<b>Label</br>
+
+```
+		<div class="form-group">
+          <input 
+          bs-input 
+          id="name" 
+          [label]="'labelName'"
+          [placeholder]="'your name'" 
+          formControlName="name" 
+          type="text"
+          >
+        </div>
+```
+Example component using;
 
 ### Ts
 ```
@@ -126,45 +172,36 @@ export class AppComponent {
 </div>
 ```
 
-## Configuração para Desenvolvimento
+## Configuration?
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Simply call the module in App or not;
 
-```sh
-make install
-npm test
 ```
+	import { BsModule } from './directive/bs-module';
 
-## Histórico de lançamentos
-
-* 0.2.1
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1
-    * Trabalho em andamento
-
-## Meta
-
-Seu Nome – [@SeuNome](https://twitter.com/...) – SeuEmail@exemplo.com
-
-Distribuído sob a licença XYZ. Veja `LICENSE` para mais informações.
-
-[https://github.com/yourname/github-link](https://github.com/othonalberto/)
+    @NgModule({
+      declarations: [
+        AppComponent
+      ],
+      imports: [
+        BrowserModule,
+        FormsModule,
+        BsModule,
+        ReactiveFormsModule,
+        HttpModule
+      ],
+      providers: [],
+      bootstrap: [AppComponent]
+    })
+```
 
 ## Contributing
 
-1. Faça o _fork_ do projeto (<https://github.com/yourname/yourproject/fork>)
-2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
-3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
-4. _Push_ (`git push origin feature/fooBar`)
-5. Crie um novo _Pull Request_
+1. Fork (<https://github.com/raphaelkieling/bootstrap-validator-quick>)
+2. Create branch feature (`git checkout -b feature/fooBar`)
+3. Commit (`git commit -am 'Add some fooBar'`)
+4. Push (`git push origin feature/fooBar`)
+5. Create a new pull request
 
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/bootstrap-validator-quick

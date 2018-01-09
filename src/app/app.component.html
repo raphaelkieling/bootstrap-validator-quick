@@ -5,8 +5,15 @@
     <div class="row">
       <div class="col-md-12">
         <div class="form-group">
-          <input bs-input bs-validator [errors]="error.name" id="name" [placeholder]="'your name'" formControlName="name" type="text"
-            ngModel>
+          <input
+          bs-input
+          bs-validator
+          id="name"
+          [errors]="error.name"
+          [placeholder]="'your name'"
+          formControlName="name"
+          type="text"
+          >
         </div>
       </div>
     </div>
