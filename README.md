@@ -1,10 +1,6 @@
 # Boostrap Validator 
 > Valid your input bootstrap easy.
 
-[![NPM Version][npm-image]][npm-url]
-<!-- [![Build Status][travis-image]][travis-url] -->
-[![Downloads Stats][npm-downloads]][npm-url]
-
 
 This package tries to make it easier to use forms using CDN or bootstrap package. Created directives easy to use.
 
@@ -22,9 +18,7 @@ npm install bootstrap-validator-quick --save
 Now existing two directives
 
 ### bs-validator
-<br>
 <b>Errors</b>
-<br>
 ```
   error = {
     name: {
@@ -33,7 +27,6 @@ Now existing two directives
     }
   }
 ```
-<br>
 <b>Config</b>
 ```
 export class ConfigValidator {
@@ -52,7 +45,7 @@ export class ErrorConfig {
 }
 	
 ```
-### bs-input
+## bs-input
 <b>Label</br>
 
 ```
