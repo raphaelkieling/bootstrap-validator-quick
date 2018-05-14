@@ -19,7 +19,7 @@ Now existing two directives
 
 ### bs-validator
 <b>Errors</b>
-```
+```javascript
   error = {
     name: {
       maxlength: 'Max length is 10',
@@ -28,7 +28,7 @@ Now existing two directives
   }
 ```
 <b>Config</b>
-```
+```typescript
 export class ConfigValidator {
   error = new ErrorConfig();
   validation = new Validation();
@@ -46,9 +46,9 @@ export class ErrorConfig {
 	
 ```
 ## bs-input
-<b>Label</br>
+**Label**
 
-```
+```html
 		<div class="form-group">
           <input 
           bs-input 
@@ -63,7 +63,7 @@ export class ErrorConfig {
 Example component using;
 
 ### Ts
-```
+```typescript
 import { Observable } from 'rxjs/Observable';
 import { Component } from '@angular/core';
 import { FormGroup } from '@angular/forms/src/model';
@@ -116,7 +116,7 @@ export class AppComponent {
 
 ```
 ### Html
-```
+```html
   <div class="container">
   <br>
   <h1>Template form-control simple bootstrap</h1>
@@ -169,7 +169,7 @@ export class AppComponent {
 
 Simply call the module in App or not;
 
-```
+```typescript
 	import { BsModule } from './directive/bs-module';
 
     @NgModule({
